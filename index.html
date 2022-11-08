@@ -15,9 +15,12 @@
 
 <body>
     <div id="appEmail">
+
+        <label for="number">Inserisci quantità di mail da generare</label><br>
+        <input type="number" min="1" value="1" v-model.number="listaNum"><br>
         <button @click="callApi">Genera mail</button>
         <ul>
-            <li v-for="(email, index) in emailRandom" :key="index">{{email}}</li>
+            <li v-if="emailRandom.length >= listaNum" v-for="(email, index) in emailRandom" :key="index">{{email}}</li>
         </ul>
     </div>
 
