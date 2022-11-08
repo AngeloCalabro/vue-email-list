@@ -10,14 +10,16 @@ createApp({
     methods: {
         callApi() {
             for (let i = 0; i < this.listaNum; i++) {
-                axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((res) => {
-                    console.log(res.data.response);
-                    let email = res.data.response;
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((result) => {
+                    console.log(result.data.response);
+                    let email = result.data.response;
                     this.emailRandom.push(email);
                 })
             }
             console.log(this.listaNum);
+            // this.listaNum = '';
             this.emailRandom = [];
+
         }
     },
     created() {
