@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             emailRandom: [],
-            listaNum: 1
+            listaNum: 10
         }
     },
     methods: {
@@ -19,10 +19,9 @@ createApp({
             console.log(this.listaNum);
             // this.listaNum = '';
             this.emailRandom = [];
-
         }
     },
     created() {
-        // this.callApi()
+        // this.callApi();
     }
 }).mount('#appEmail')
